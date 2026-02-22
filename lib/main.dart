@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'core/app_routes.dart';
-import 'core/theme.dart';
 import 'screens/splash/splash_screen.dart';
 
 void main() {
@@ -15,9 +14,9 @@ class KrishiMitraApp extends StatelessWidget {
     return MaterialApp(
       title: 'KrishiMitra AI',
       debugShowCheckedModeBanner: false,
-     // theme: appTheme, //
       routes: appRoutes,
-      home: const SplashScreen(),
+      initialRoute: '/splash',
+      home: const SplashScreen(), // fallback if route fails
     );
   }
 }
